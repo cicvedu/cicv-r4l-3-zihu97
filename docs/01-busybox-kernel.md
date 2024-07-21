@@ -52,7 +52,9 @@ make install -j$(nproc)
 ```
 
 编译时发现如下报错：
+
 ![alt text](images/1.png)
+
 解决办法可参考[Disable CBQ](https://www.reddit.com/r/linuxquestions/comments/1cizfpo/id_like_some_help_with_this_youtube_guide/)
 
 ```bash
@@ -60,6 +62,7 @@ sed -i 's/CONFIG_TC=y/CONFIG_TC=n/g' .config
 ```
 
 Then obtain the busybox binary in `/mnt/busybox-1.36.1/_install`.
+
 ![alt text](images/2.png)
 
 ## Step 4: Install qemu
@@ -123,6 +126,7 @@ cargo install --path .
 
 继续编译还发现如下报错：
 ld.lld: error: version script assignment of 'LINUX_2.6' to symbol '__vdso_sgx_enter_enclave' failed: symbol not defined
+
 ![alt text](images/4.png)
 
 解决办法可参考[modify kernel](https://lkml.org/lkml/2022/11/8/1236)

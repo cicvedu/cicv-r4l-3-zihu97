@@ -269,7 +269,6 @@
 /sbin/route
 /sbin/slattach
 /usr/bin/ssl_client
-/sbin/tc
 /usr/bin/tcpsvd
 /usr/bin/udpsvd
 /usr/bin/telnet
